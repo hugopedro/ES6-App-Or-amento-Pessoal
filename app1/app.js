@@ -29,6 +29,16 @@ function CadastrarDespesa() {
         valor.value
     )
 
-    console.log(despesa)
+    gravar(despesa)
+
+    //para gravar dentro do local storage faz-se o seguinte:
+    //JSON converte o objeto literal para um legível.
+    // se nao gravar atualiza a pagina com ctrl + f5
+    // é no navegador em Application -> local storage -> file:// que aparece
+    // se for usar o setItem ao inserir novos dados ele irá sobrescrever o anterior, portanto deve-se implementar uma lógica de 
+    // identificador unico para poder ir adicionando novos registros
+    function gravar(d) {
+        localStorage.setItem('despesa', JSON.stringify(d))
+    }
 
 }
