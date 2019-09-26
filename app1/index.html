@@ -14,6 +14,8 @@
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
+    <script src=app.js></script>
+
 	</head>
 
   <body>
@@ -81,7 +83,8 @@
 
         <div class="col-md-6">
           <select class="form-control" id="tipo">
-            <option>Tipo</option>
+            <!--o tipo ta com o value="" pra nao forçar a propria descrição-->
+            <option value="">Tipo</option>
             <option value="1">Alimentação</option>
             <option value="2">Educação</option>
             <option value="3">Lazer</option>
@@ -99,9 +102,8 @@
         <div class="col-md-2">
           <input type="text" class="form-control" placeholder="Valor" id="valor" />
         </div>
-
-        <div class="col-md-2 d-flex justify-content-end">
-          <button type="button" class="btn btn-primary">
+        <div class="col-md-2 d-flex justify-content-end"> <!--onclick cadastrardespesa para chamar a func do js-->
+          <button type="button" class="btn btn-primary" onclick="CadastrarDespesa()">
             <i class="fas fa-plus"></i>
           </button>
         </div>
